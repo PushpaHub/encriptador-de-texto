@@ -1,0 +1,131 @@
+header{
+    height: 108px;
+    background-image: url(Imagenes/CuadroColor.png);
+}
+
+.cabeza{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+h2{
+    position: absolute;
+    top: 35px;
+    left: 200px;
+    font-family: Arial;
+    font-size: 35px;
+    color: #9A4866;
+    font-weight: 600;
+    font-style: italic;
+}
+
+body{
+    background-color: white;
+}
+
+.cajas{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+
+.cajas li{
+    display: inline-block;
+    width: 49%;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 85%;
+    height: 300px;
+    resize: none;
+    padding: 10px;
+    border-left: 8px solid #9A4866;
+    border-top: 8px solid #9A4866;
+    border-right: 5px solid #9A4866;
+    border-bottom: 5px solid #9A4866;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-family: Arial;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.texto-secundario{
+    margin-bottom: 15px;
+    background-image: url("Imagenes/TextoEncriptadoFinal.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+p{
+    margin-bottom: 10px;
+}
+
+.botones{
+    width: 51%;
+    position: absolute; 
+    margin-bottom: 20px;
+}
+
+.botones button{
+    margin-right: 20px;
+    width: 26%;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.botones button:hover{
+    transform:scale(1.2);
+}
+
+.encriptar{
+    background-color: chartreuse;
+}
+
+.desencriptar{
+    background-color: crimson;
+}
+
+.borrar{
+    background-color: plum;
+}
+
+.copiar{
+    position: absolute;
+    width: 13%;
+    margin-top: 10px;
+    margin-left: 32%;
+    background-color: yellow;
+    font-family: Arial;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.pie{
+    margin-top: 60px;
+    background-color: #9A4866;
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+}
