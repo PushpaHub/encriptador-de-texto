@@ -38,6 +38,8 @@ body{
 }
 
 textarea{
+    width: 85%;
+    height: 300px;
     resize: none;
     padding: 10px;
     border-left: 8px solid #9A4866;
@@ -64,7 +66,7 @@ p{
 }
 
 .botones{
-    width: 53%;
+    width: 51%;
     position: absolute; 
     margin-bottom: 20px;
 }
