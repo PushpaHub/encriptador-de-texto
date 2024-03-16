@@ -2,79 +2,60 @@ let ingresadoArea = document.querySelector(".texto-ingresado"); //area de texto 
 let secundarioArea = document.querySelector(".texto-secundario"); //area de texto secundario
 
 function checarMinusculas(cadena){
+//Checamos que todas las letras son minusculas y que no son solo espacios
+
     let chCode = 0;
     let resultado = true;
+    let cadenaVacia = "";
+
+    //Minusculas
     for (let i=0; i<(cadena.length); i++){
         chCode = cadena.charCodeAt(i);
         if (((chCode < 97) || (chCode > 122)) && (chCode != 164) && (chCode != 32)){
-            console.log("Deben ser solo minusculas y sin acentos");
-            return(false);
+            alert("Debes escribir solo minusculas y sin acentos");
+            resultado = false;
             break;
         }
     }
+    
+    //No solo espacios
+    for (let i=0; i<(cadena.length); i++){
+        cadenaVacia = cadenaVacia + " ";
+    }
+    if (cadena == cadenaVacia){
+        alert("Debes escribir algún texto");
+        resultado = false;
+    }
+    
+    return(resultado);
 }
 
 function encriptar(){
     let ingresado = ingresadoArea.value;
         
-    if (checarMinusculas(ingresado) == false) {
-        alert("Solo se pueden usar letras minúsculas y sin acentos.");
-    }
-    else {
-        let secundario = "";
-        for (let i=0; i<(ingresado.length); i++){
-            secundario = secundario + ingresado.charAt(i);
-            if (ingresado.charAt(i) == "e")
-            secundario = secundario + "nter";
-            else 
-                if (ingresado.charAt(i) == "i") 
-                    secundario = secundario + "mes";
-                else 
-                    if (ingresado.charAt(i) == "a") 
-                        secundario = secundario + "i"; 
-                    else 
-                        if (ingresado.charAt(i) == "o") 
-                            secundario = secundario + "ber"; 
-                        else 
-                            if (ingresado.charAt(i) == "u") 
-                                secundario = secundario + "fat";
-        }                    
+    if (checarMinusculas(ingresado) == true){
+        let secundario = ingresado.replaceAll("e","enter");
+        secundario = secundario.replaceAll("i","imes");
+        secundario = secundario.replaceAll("a","ai");
+        secundario = secundario.replaceAll("o", "ober");
+        secundario = secundario.replaceAll("u", "ufat");
+
         secundarioArea.value = secundario;
         secundarioArea.style.backgroundImage = "none";
-    }
+    } 
 }
 
 function desencriptar(){
     let ingresado = ingresadoArea.value;
         
-    if (checarMinusculas(ingresado) == false) {
-        alert("Solo se pueden usar letras minúsculas y sin acentos.");
-    }
-    else {
-        let secundario = "";
-        let i = 0;
+    if (checarMinusculas(ingresado) == true) {
+            
+        let secundario = ingresado.replaceAll("ufat", "u");
+        secundario = secundario.replaceAll("ober", "o");
+        secundario = secundario.replaceAll("ai", "a");
+        secundario = secundario.replaceAll("imes", "i");
+        secundario = secundario.replaceAll("enter", "e");
         
-        while (i < ingresado.length){
-            secundario = secundario + ingresado.charAt(i);
-            console.log(secundario);
-
-            if (ingresado.substr(i, 5) == "enter")
-                i = i + 5;
-            else 
-                if (ingresado.substr(i, 4) == "imes") 
-                    i=i+4;
-                else 
-                    if (ingresado.substr(i, 2) == "ai") 
-                        i=i+2; 
-                    else 
-                        if (ingresado.substr(i,4) == "ober")  
-                            i=i+4; 
-                        else 
-                            if (ingresado.substr(i,4) == "ufat")
-                                i=i+4;
-                            else
-                                i++;
-        }                    
         secundarioArea.value = secundario;
         secundarioArea.style.backgroundImage = "none";
     }
