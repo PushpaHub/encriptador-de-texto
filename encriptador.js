@@ -11,8 +11,8 @@ function checarMinusculas(cadena){
     //Minusculas
     for (let i=0; i<(cadena.length); i++){
         chCode = cadena.charCodeAt(i);
-        if (((chCode < 97) || (chCode > 122)) && (chCode != 164) && (chCode != 32)){
-            alert("Debes escribir solo minusculas, sin acentos y no usar tecla Enter");
+        if (((chCode < 97) || (chCode > 122)) && (chCode != 164) && (chCode != 32) && (chCode != 10)){
+            alert("Debes escribir solo minusculas y sin acentos");
             resultado = false;
             break;
         }
