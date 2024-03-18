@@ -1,5 +1,6 @@
 let ingresadoArea = document.querySelector(".texto-ingresado"); //area de texto ingresado
 let secundarioArea = document.querySelector(".texto-secundario"); //area de texto secundario
+let cambiarCopiar = document.querySelector(".copiar"); //boton Copiar
 
 function checarMinusculas(cadena){
 //Checamos que todas las letras son minusculas y que no son solo espacios
@@ -42,6 +43,7 @@ function encriptar(){
 
         secundarioArea.value = secundario;
         secundarioArea.style.backgroundImage = "none";
+        cambiarCopiar.innerHTML = "Copiar";
     } 
 }
 
@@ -58,6 +60,7 @@ function desencriptar(){
         
         secundarioArea.value = secundario;
         secundarioArea.style.backgroundImage = "none";
+        cambiarCopiar.innerHTML = "Copiar";
     }
 }
 
@@ -65,10 +68,12 @@ function borrar(){
     ingresadoArea.value = "";
     secundarioArea.value = "";
     secundarioArea.style.backgroundImage = "url('Imagenes/TextoEncriptadoFinal.png')";
+    cambiarCopiar.innerHTML = "Copiar";
 }
 
 function copiar(){
     navigator.clipboard.writeText(secundarioArea.value);
+    cambiarCopiar.innerHTML = "Texto copiado";
 }
 
 

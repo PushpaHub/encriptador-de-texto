@@ -133,7 +133,7 @@ p{
 
 @media (max-width: 480px){
     
-    header, .cabeza, h1, .botones, .pie{
+    header, .cabeza, h1, .botones, .boton-copiar, .pie{
         width: auto;
     }
 
@@ -166,7 +166,7 @@ p{
         height: 250px;
     }
     
-    p{}
+    p{
         font-size: 18px;
     }
 
@@ -182,10 +182,10 @@ p{
         margin-left: 0;
         margin-top: 0;
     }
+
     .botones button, .copiar{
         width: auto;
         font-family: "Arial Narrow";
     }
-
 
 }
