@@ -4,6 +4,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
         <title>Encriptador del Texto</title>
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style-encriptador.css">
@@ -12,7 +13,7 @@
     <body>
         <header>
             <div class="cabeza">
-                <h1><img src="Imagenes/LogoAnandaProgramacionOriginal.png" 150px" height="98px" alt="Logo de Ananda Programación"></h1>
+                <h1><img class="logo" src="Imagenes/LogoAnandaProgramacionOriginal.png" alt="Logo de Ananda Programación"></h1>
                 <h2>Encriptador del Texto</h2>
             </div>
         </header>
@@ -22,7 +23,7 @@
             <div> 
                 <ul class="cajas">
                     
-                    <li caja-izquierda>
+                    <li class="caja-izquierda">
                         <form>
                             <textarea class="texto-ingresado" required placeholder="Ingresa el texto aquí"></textarea>
                         </form>
@@ -34,11 +35,11 @@
                         </div>
                     </li>
 
-                    <li caja-derecha>
+                    <li class="caja-derecha">
                         <form>
                             <textarea class="texto-secundario"></textarea>
                         </form>
-                        <div class="botones">
+                        <div class="boton-copiar">
                             <button onclick="copiar()" class="copiar">Copiar</button>
                         </div>
                     </li>
@@ -49,7 +50,7 @@
         </main>
 
         <footer>
-            <p class="pie">&copy Pushpadevi - 2024</p>
+            <p class="pie" >&copy Pushpadevi - 2024</p>
         </footer>
     
         <script src="encriptador.js"></script>

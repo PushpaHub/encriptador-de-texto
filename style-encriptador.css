@@ -10,6 +10,10 @@ header{
     padding: 5px 0;
 }
 
+.logo{
+    width: 150px;
+}
+
 h2{
     position: absolute;
     top: 35px;
@@ -33,7 +37,7 @@ body{
 
 .cajas li{
     display: inline-block;
-    width: 49%;
+    width: 49.5%;
     box-sizing: border-box;
 }
 
@@ -54,7 +58,7 @@ textarea{
 }
 
 .texto-secundario{
-    margin-bottom: 15px;
+    margin-left: 6%;
     background-image: url("Imagenes/TextoEncriptadoFinal.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -62,40 +66,47 @@ textarea{
 }
 
 p{
+    width: 93%;
     margin-bottom: 10px;
 }
 
-.botones{
-    width: 51%;
-    position: absolute; 
-    margin-bottom: 20px;
+.botones, .boton-copiar{
+    width: 93%;
+    position: relative; 
+    display: flex;
+    justify-content: center;
 }
 
-.botones button{
-    margin-right: 20px;
-    width: 26%;
+.boton-copiar{
+    margin-left: 6%;
+    margin-top: 16px;
+}
+
+.botones button, .copiar{
+    padding: 10px;
+    box-sizing: border-box;    
     font-family: Arial;
     font-weight: bold;
     font-size: 18px;
     text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.5s;
 }
 
-.botones button:hover{
+.botones button:hover, .copiar:hover{
     transform:scale(1.2);
 }
 
 .encriptar{
     background-color: chartreuse;
+    margin-right: 10px;
 }
 
 .desencriptar{
     background-color: crimson;
+    margin-right: 10px;
 }
 
 .borrar{
@@ -103,24 +114,14 @@ p{
 }
 
 .copiar{
-    position: absolute;
-    width: 13%;
-    margin-top: 10px;
-    margin-left: 32%;
+    position: relative;
+    margin: 10px auto;
     background-color: yellow;
-    font-family: Arial;
-    font-weight: bold;
-    font-size: 18px;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border: none;
-    cursor: pointer;
-    transition: 1s;
 }
 
 .pie{
-    margin-top: 60px;
+    width: 100%;
+    margin-top: 30px;
     background-color: #9A4866;
     padding: 10px;
     text-align: center;
@@ -128,4 +129,63 @@ p{
     font-family: Arial;
     font-weight: bold;
     color: white;
+}
+
+@media (max-width: 480px){
+    
+    header, .cabeza, h1, .botones, .pie{
+        width: auto;
+    }
+
+    header{
+        height: 155px;
+    }
+
+    h1{
+        text-align: center;
+    }
+   
+    h2{
+        position: static;
+        font-size: x-large;
+        margin-top: 10px;
+        text-align: center;
+    }
+    
+    .cajas li{
+        display: block;
+        width: 100%;
+    }
+
+    .caja-izquierda{
+        margin-bottom: 20px;
+    }
+
+    textarea{
+        width: 90%;
+        height: 250px;
+    }
+    
+    p{
+        font-size: 18px;
+    }
+
+    .texto-secundario{
+        margin-left: 0;
+    }
+
+    .botones{
+        position: relative;
+    }
+    
+    .boton-copiar{
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .botones button, .copiar{
+        width: auto;
+        font-family: "Arial Narrow";
+    }
+
+
 }
